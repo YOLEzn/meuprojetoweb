@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,400&display=swap');
+
+/* O restante do seu CSS virá abaixo */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+div.bloco-imagem-pequena {
+    max-width: 4000px;
+    justify-self: right;
+    /* ... (Mantenha suas regras de width e max-width aqui) ... */
+    
+    /* 1. Ativa o contexto de transformação */
+    transform: translateY(-450px); /* <<< PROPRIEDADE CHAVE */
+    
+    /* 2. Opcional: Adiciona uma transição suave para quando ela aparecer */
+    transition: transform 0.5s ease-out;
+    /* 2. Puxa a imagem para a direita, fora do limite direito. */
+    margin-right: +170px; /* <<< AJUSTE ESSE VALOR */ 
+    
+    /* (Mantenha transition para suavidade) */
+}
+
+/* HEADER */
+
+header{
+    background-color: #000;
+    padding: 10px;
+    display: flex;
+    align-items: left;
+    justify-content: space-around;
+
+}
+ header h1{
+    color: #ff0505;
+    font-size: 2.5rem;
+    text-align: left;
+    
+    
+ }
+
+ header span{
+    color : #ffffff;
+    text-align: left;
+    text-align: left;
+
+ }
+
+ header .navegacao-primaria { 
+    display: flex;
+    gap: 10PX;
+    align-items: center;
+    
+ }
+
+ header .navegacao-primaria li a{
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1.3rem;
+    
+ }
+
+ /*DOWLOAD CURRICULO SECAO*/
+
+ .section-div-img-foto-de-perfil:hover {
+    /* ... outros estilos ... */
+    
+    /* Nome da animação, duração, timing function e modo de preenchimento */
+    animation: inicializar 0.7s forwards; /* A duração estava 7.s, o que é muito longo. Corrigi para 0.7s. */
+    
+    /* Nota: Se '7.s' for um erro de digitação e deveria ser 7s, use '7s'. Se queria 0.7s, use '0.7s' */
+
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    gap : 60px;
+    padding: 60px;
+
+ }
+ /* CONTAINER DA IMAGEM PEQUENA */
+
+.bloco-imagem-pequena {
+    /* Limita o tamanho do bloco. Altere este valor para o tamanho que você quer. */
+    max-width: 400px; /* Por exemplo, limita o bloco a 200 pixels de largura */
+    
+    justify-self: center;
+    max-width: 400px;
+    
+    /* Puxa o bloco 10 pixels para a esquerda em relação ao centro da coluna */
+    margin-left: -10px; /* <<< AJUSTE O VALOR (ex: -10px, -30px) */
+    
+    /* Certifique-se de que não haja margens conflitantes */
+    margin-right: 0; 
+}
+/* CONTAINER DA IMAGEM PEQUENA FIM */
+
+/* A IMAGEM EM SI */
+.bloco-imagem-pequena img {
+    /* Garante que a imagem se ajuste ao container sem ultrapassá-lo */
+    width: 100%; 
+    height: auto; /* Mantém a proporção */
+    display: block;
+   align-items: center;
+}
+ 
+.section-div div {
+    margin-top: 120px;
+    align-self: start;
+    display :grid;
+    gap : 30px;
+
+}
+.section-div div h2 {
+   font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color: #f7f7f7;
+    font-size: 2.5rem;
+}
+
+.section-div div p {
+    font-family: 'poppins';
+    font-weight: 200;
+    color: #f7f7f7;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+} 
+
+footer{
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    color: rgb(247, 244, 244);
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+body {
+    margin: 0;
+    /* Certifique-se de que a cor do fundo seja preta */
+    background-color: #000000;
+}
+
+.digitando::after { 
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: piscar 1s infinite;
+
+}
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.section-div div a {
+    justify-self: start;
+    color: #ffffff;
+    padding: 15px 40px;
+    border-radius: 5px;
+    border: 2px solid #fdfcfc;
+}
+.downloaad-button {
+
+    /* 1. Mude o comportamento de 'bloco' para 'inline-block' */
+    /* Isso faz com que o elemento ocupe apenas a largura do seu conteúdo */
+    
+    display: inline-block; 
+    
+    /* 2. Adicione preenchimento (padding) para criar a 'caixinha' */
+    /* 10px em cima/baixo e 20px nas laterais */
+    
+    padding: 10px 20px; 
+    
+    /* 3. Adicione a borda branca */
+    border: 1px solid white; 
+    
+    /* 4. Opcional: Arredonde as bordas */
+   
+    border-radius: 5px; 
+    
+    /* 5. Opcional: Ajuste o texto (cor e sem sublinhado se for um link) */
+    color: white; /* Cor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-size: 16px; /* Ajuste o tamanho da fonte se necessário */
+}
+
+.section-div-img-foto-perfil {
+    width: 150%; /* <-- Esta largura afeta a imagem onde ela estiver */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(247, 245, 245, 0.2);
+}
+
+.section-div-img-foto-de-perfil:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+.section-div div a:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+/* FIM DO CSS DO DOWNLOAD DO CURRICULO */
+
+/* SECAO SOBRE MIM */
+
+.secao-sobre-mim {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Distribui texto e imagem nas laterais */
+    gap: 60px;
+    padding: 10px 8%; /* Ajusta o padding para centralizar o conteúdo */
+    margin-bottom: 80px;
+    min-height: 80vh; /* Garante que ela ocupe uma boa parte da tela */
+    
+}
+
+.bloco-texto {
+    
+    /* ... (mantenha seus estilos de width, max-width, color, etc.) ... */
+    
+    /* PINTA O FUNDO DO CONTAINER DO TEXTO */
+    background-color: #e90909; /*vermelho */
+    
+    /* Adicione um PADDING para criar espaço entre o texto e a nova borda pintada */
+    padding: 25px; /* Exemplo de padding */
+    
+    /* Opcional: Arredonda os cantos */
+    border-radius: 10px;
+    
+    /* O texto ocupa a maior parte do lado esquerdo */
+    width: 50%; 
+    max-width: 400px; /* Garante que a linha de texto não fique muito longa */
+    color: #f7f7f7; 
+    line-height: 1.6;
+    border: 1px solid rgb(238, 7, 7); 
+    border-color: #fa0000;
+    /* 1. Mude o comportamento de 'bloco' para 'inline-block' */
+    /* Isso faz com que o elemento ocupe apenas a largura do seu conteúdo */
+    /* 4. Opcional: Arredonde as bordas */
+
+   
+    border-radius: 5px; 
+}
+.bloco-texto h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px; 
+    text-align: center;
+
+}   
+.bloco-imagem.animado{
+    width: 1100px; /* A imagem ocupa o lado direito */
+    border-radius: 20px;
+    text-align: center;
+
+}
+
+
+
+
+
+/* ESTADO INICIAL DOS ELEMENTOS ANIMADOS */
+.animado {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Estado inicial da imagem (vem da direita) */
+
+.bloco-imagem.animado {
+    /* Diminua de 200px para um valor menor, ex: 100px */
+    transform: translateX(100px); 
+}
+
+/* Estado inicial do texto (vem da esquerda) */
+
+.bloco-texto {
+    /* Mantém o width alto para o flexbox */
+    width: 100%; 
+    
+    /* AUMENTE ESTE VALOR para deixar o texto mais largo. Ex: 750px */
+    max-width: 750px; /* Altere 650px (ou o valor atual) para um número maior */
+    
+    color: #f7f7f7; 
+    line-height: 1.6;
+    /* ... outros estilos ... */
+}
+
+
+/* CLASSE VISÍVEL (Estado Final) */
+.animado.visivel, .bloco-texto.visivel { /* Aplique a classe visivel no bloco-texto também */
+    opacity: 1;
+    transform: translateX(0); /* Volta para a posição original */
+}
+
+@keyframes inicializar {
+    /* Estado inicial da animação (0%) */
+    from { 
+        opacity: 0;
+        transform: translate3d(0, -60px, 0); 
+    }
+    
+    /* Estado final da animação (100%) */
+    to { 
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* FIM SECAO SOBRE MIM */
+
+
+
+#backToTopButton {
+   max-width: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #e60b0b;
+    bottom: 20px;  
+    right: 20px;
+    position: fixed;
+    display: none; /* Inicialmente oculto */
+    z-index: 1000; /* Garante que fique acima de outros elementos */    
+}
+
+/* CONTAINER: Limita a largura do vídeo e define a posição */
+.video-container {
+    /* 1. Largura Máxima: Mantém o tamanho pequeno */
+    max-width: 400px; 
+    
+    /* 2. Posição: Alinha o bloco todo à esquerda da seção */
+    margin-right: auto; /* Empurra o bloco para a esquerda consumindo o espaço à direita */
+    margin-left: 50px; /* <<< AFASTAMENTO: Adiciona 50px de margem (espaço) à esquerda */
+    margin-top: 30px; 
+    margin-bottom: 30px;
+    
+    /* 3. Estilo: Adiciona a borda fina vermelha ao redor do container */
+    border: 1px solid #ff0000; /* Borda vermelha (Hex: #ff0000) e fina (1px) */
+    border-radius: 8px; /* Arredonda os cantos da "caixinha" */
+    
+    /* 4. Sombra (opcional, pode ser removida se não quiser) */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); 
+}
+
+/* IFRAME: Estiliza o "quadro" do vídeo dentro do container */
+.video-container iframe {
+    width: 100%; 
+    height: 250px; 
+    
+    /* Remove a borda do iframe para não duplicar o efeito da borda vermelha do container */
+    border: none; 
+    
+    /* Garante que o iframe se encaixe na borda arredondada do container */
+    border-radius: 8px; 
+    
+    /* Adiciona padding interno para separar o vídeo da borda vermelha (opcional) */
+    padding: 10px;
+}
+
+/* Centraliza o h1 que está diretamente na seção de vídeos */
+/* Seletor do título de vídeo */
+#videos h1 {
+    color: #ffffff;
+    font-size: 1.5rem; 
+    
+    /* Aumente o peso da fonte: 
+       400 é regular, 600 é semi-bold, 700 é bold. */
+    font-weight: 600; /* <<< Mude para 600 ou 700 */
+    /* ... (Mantenha suas regras de cor, tamanho e alinhamento) ... */
+    
+    /* ADICIONA ESPAÇO ACIMA DO TÍTULO, EMPURRANDO-O PARA BAIXO */
+    margin-top: 50px; /* <<< AJUSTE O VALOR (Use 20px, 50px, 80px, etc.) */
+    
+    /* Zera a margem de baixo para não criar espaço desnecessário antes do footer */
+    margin-bottom: 0; 
+    margin-top: 20px;
+}
+
+.btn {
+  background-color: #00ffff;
+  color: #111;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 1. CONTAINER DOS ÍCONES: Coloca os ícones lado a lado e centraliza o bloco */
+.social-links{
+    display: flex;
+    justify-content: center; /* Centraliza o bloco horizontalmente */
+    gap: 20px; /* Espaçamento entre os ícones */
+    margin-top: 20px; /* Espaço acima do bloco de ícones */
+}
+   
+
+/* 1. LAYOUT: Coloca os itens da lista em linha e em colunas (opcional, mas recomendado) */
+.lista-habilidades {
+    /* Remove os marcadores de lista */
+    list-style: none;
+    
+    /* Centraliza a lista na página */
+    margin: 50px auto; 
+    
+    /* Limita a largura da lista para melhor visualização */
+    max-width: 800px;
+    
+    /* Usa CSS Grid para exibir as habilidades em 2 ou 3 colunas */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+/* 2. ESTILO DOS ITENS DA LISTA */
+.lista-habilidades li {
+    /* Ativa o Flexbox para alinhar o ícone e o texto LADO A LADO */
+    display: flex; 
+    
+    /* Alinha o ícone e o texto verticalmente ao centro */
+    align-items: center; 
+    
+    /* Adiciona um espaço entre o ícone e o texto */
+    gap: 15px; 
+    
+    /* Estiliza o item como uma caixa para destaque */
+    background-color: #1a1a1a; /* Fundo cinza escuro para a caixa */
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+/* 3. ESTILO DOS ÍCONES (Imagens) */
+.lista-habilidades img {
+    /* Limita o tamanho do ícone (o que você estava perguntando!) */
+    width: 30px; 
+    height: 30px; 
+}
+#habilidades {
+    background-color: #000000; /* Garante fundo preto */
+    /* ... outros estilos ... */
+    justify-content: center;
+}
+
+#habilidades h2 {
+    /* Esta regra centraliza todos os elementos de texto e blocos 'inline-block' 
+       que estão diretamente dentro desta seção, incluindo o seu h2. */
+    text-align: center; 
+    
+    /* Garante fundo preto */
+    background-color: #000000; 
+    
+    /* Opcional: Adiciona um padding para dar espaço vertical */
+    padding: 50px 0;
+    
+    /* 1. Aparência da caixa */
+    background-color: #000000; /* Fundo escuro/cinza para a caixa */
+    color: rgb(255, 0, 0); /* Cor do texto */
+    /* 3. Estilo e Posição */
+    font-size: 1.8rem; /* Ajuste o tamanho da fonte */
+    border-radius: 0%; /* Sem cantos arredondados */
+
+}
