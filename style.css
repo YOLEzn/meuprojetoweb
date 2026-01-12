@@ -31,6 +31,7 @@ div.bloco-imagem-pequena {
 /* HEADER */
 
 header {
+
     display: flex; /* Ativa o modo flexbox */
     justify-content: space-between; /* Empurra os itens para as extremidades */
     align-items: center; /* Centraliza verticalmente o texto e o menu */
@@ -38,19 +39,15 @@ header {
 }
 
 /* Garante que a lista do menu continue alinhada horizontalmente */
+
 .navegacao-primaria {
+
     display: flex;
     list-style: none;
     gap: 20px; /* Espaçamento entre os itens do menu */
 }
 
-    header {
-        background-color: #000000;
-        padding: 20px 0;
-
-
-}header h1{
-    font-family: 'poppins', sans-serif;
+ header h1{
     color: #ff0505;
     font-size: 2.5rem;
     text-align: left;
@@ -63,6 +60,11 @@ header {
     text-align: left;
     text-align: left;
 
+ }
+
+    header .navegacao-primaria li {
+        /* Remove marcadores de lista e define espaçamento */
+    
  }
 
  header .navegacao-primaria li a{
