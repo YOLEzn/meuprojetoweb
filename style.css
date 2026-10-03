@@ -12,10 +12,10 @@
 }
 
 :root {
-    --max: 1280px;                          /* largura máxima do conteúdo */
-    --lado: clamp(20px, 5vw, 60px);         /* margem lateral que cresce com a tela */
+    --max: 1500px;                          /* largura máxima do conteúdo */
+    --lado: clamp(16px, 3.5vw, 44px);         /* margem lateral que cresce com a tela */
     --vermelho: #ff0505;
-    --foto: 400px;                          /* tamanho máximo da foto */
+    --foto: clamp(300px, 36vw, 460px);      /* tamanho da foto (maior que antes) */
 }
 
 html {
@@ -75,13 +75,15 @@ main > section,
 .section-hero,
 .secao-sobre-mim {
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr var(--foto);
     align-items: center;
-    gap: 60px;
+    gap: 40px;
     padding: 70px 0;
 }
 
 /* ---- Início ---- */
+.section-hero { padding-top: 30px; }
+
 .hero-texto {
     display: flex;
     flex-direction: column;
@@ -247,6 +249,25 @@ main > section,
 .botao-contato:hover { background: #fff; color: #000; }
 
 .social-links { display: flex; justify-content: center; gap: 22px; margin-top: 26px; }
+
+/* =========================================================
+   DESKTOP (a partir de 1101px)
+   ========================================================= */
+@media (min-width: 1101px) {
+    .hero-texto {
+        position: relative;
+        z-index: 2;                       /* texto sempre por cima da foto */
+        margin-left: -28px;               /* "Olá..." mais para a esquerda */
+        transform: translateY(-36px);     /* um pouco mais para cima */
+    }
+
+    /* mensagem em UMA linha só */
+    .hero-texto p {
+        max-width: none;
+        white-space: nowrap;
+        font-size: clamp(.78rem, 1vw, .95rem);
+    }
+}
 
 /* =========================================================
    TABLET E CELULAR  (uma coluna, tudo centralizado)
