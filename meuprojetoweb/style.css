@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,400&display=swap');
+
+/* ==========================================================================
+   1. RESET & ESTILOS BASE
+   ========================================================================== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth; /* Rolagem suave ao clicar nos links internos */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000000;
+    color: #f7f7f7;
+    overflow-x: hidden; /* Evita rolagem horizontal indesejada em telas menores */
+}
+
+/* ==========================================================================
+   2. CABEÇALHO (HEADER)
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #000000;
+}
+
+header h1 {
+    color: #ff0505;
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+header span {
+    color: #ffffff;
+}
+
+.navegacao-primaria {
+    display: flex;
+    gap: 20px;
+}
+
+header .navegacao-primaria li a {
+    padding: 10px;
+    color: #ffffff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+header .navegacao-primaria li a:hover {
+    color: #ff0505;
+}
+
+/* ==========================================================================
+   3. SEÇÃO PRINCIPAL / HERO / DOWNLOAD CURRÍCULO
+   ========================================================================== */
+.section-div-img-foto-de-perfil {
+    background-color: #000000;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 60px 8%;
+}
+
+.section-div div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section-div div h2 {
+    font-weight: 600;
+    color: #f7f7f7;
+    font-size: 2.5rem;
+}
+
+.section-div div p {
+    font-weight: 200;
+    color: #f7f7f7;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Botões da Seção Principal */
+.section-div div a, .downloaad-button {
+    display: inline-block;
+    align-self: flex-start;
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    font-size: 1rem;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+}
+
+.section-div div a:hover, .downloaad-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Container de Imagens da Seção Principal */
+.bloco-imagem-pequena {
+    max-width: 380px;
+    width: 100%;
+    justify-self: center;
+}
+
+.bloco-imagem-pequena img,
+.section-div-img-foto-perfil {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.bloco-imagem-pequena img:hover,
+.section-div-img-foto-perfil:hover {
+    transform: scale(1.03);
+}
+
+/* Efeito de Cursor Piscando na Digitação */
+.digitando::after { 
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: piscar 1s infinite;
+}
+
+@keyframes piscar {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ==========================================================================
+   4. SEÇÃO SOBRE MIM
+   ========================================================================== */
+.secao-sobre-mim {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 60px 8%;
+    min-height: 60vh;
+}
+
+.bloco-texto {
+    background-color: #e90909;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 650px;
+    color: #f7f7f7;
+    line-height: 1.6;
+    border: 1px solid #fa0000;
+}
+
+.bloco-texto h2 {
+    font-size: 2.2rem;
+    margin-bottom: 15px; 
+    text-align: center;
+}
+
+.bloco-imagem.animado {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Animações e Visibilidade ao Rolar */
+.animado {
+    opacity: 0;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.bloco-imagem.animado {
+    transform: translateX(50px); 
+}
+
+.bloco-texto.animado {
+    transform: translateX(-50px);
+}
+
+.animado.visivel {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ==========================================================================
+   5. SEÇÃO VÍDEOS
+   ========================================================================== */
+#videos {
+    padding: 40px 8%;
+    text-align: center;
+}
+
+#videos h1 {
+    color: #ffffff;
+    font-size: 2rem; 
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}
+
+.video-container {
+    max-width: 560px; 
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #ff0000;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.video-container iframe {
+    width: 100%; 
+    height: 315px; 
+    border: none;
+    display: block;
+}
+
+/* ==========================================================================
+   6. SEÇÃO HABILIDADES
+   ========================================================================== */
+#habilidades {
+    background-color: #000000;
+    padding: 60px 8%;
+}
+
+#habilidades h2 {
+    text-align: center; 
+    color: #ff0000;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.lista-habilidades {
+    list-style: none;
+    margin: 0 auto; 
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 0;
+}
+
+.lista-habilidades li {
+    display: flex; 
+    align-items: center; 
+    gap: 15px; 
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    border: 1px solid #333333;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.lista-habilidades li:hover {
+    transform: translateY(-5px);
+    border-color: #ff0000;
+}
+
+.lista-habilidades img {
+    width: 32px; 
+    height: 32px; 
+    object-fit: contain;
+}
+
+/* Botão Secundário / Links Sociais / Footer */
+.btn {
+    background-color: #00ffff;
+    color: #111;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+#backToTopButton {
+    font-size: 24px;
+    color: #e60b0b;
+    bottom: 25px;  
+    right: 25px;
+    position: fixed;
+    display: none;
+    z-index: 1000;
+}
+
+footer {
+    text-align: center;
+    background-color: #000000;
+    color: #f7f4f4;
+    padding: 20px;
+    border-top: 1px solid #222222;
+    margin-top: 40px;
+}
+
+/* ==========================================================================
+   7. RESPONSIVIDADE (MEDIA QUERIES PARA CELULARES E TABLETS)
+   ========================================================================== */
+
+/* Tablets e Telas Médias (<= 992px) */
+@media (max-width: 992px) {
+    .section-div-img-foto-de-perfil {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .section-div div a, .downloaad-button {
+        align-self: center; /* Centraliza botões em telas menores */
+    }
+
+    .secao-sobre-mim {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .bloco-imagem.animado {
+        max-width: 100%;
+    }
+}
+
+/* Celulares (<= 600px) */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .navegacao-primaria {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-div div h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-div div p {
+        font-size: 1rem;
+    }
+
+    .bloco-texto {
+        padding: 20px;
+    }
+
+    .bloco-texto h2 {
+        font-size: 1.8rem;
+    }
+
+    .video-container iframe {
+        height: 200px;
+    }
+
+    .lista-habilidades {
+        grid-template-columns: 1fr; /* 1 coluna no celular para melhor leitura */
+    }
+}

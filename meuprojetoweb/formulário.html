@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Contato Simples</title> 
+    <link rel="stylesheet" href="style.formulario.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Formulário de Contato</h1>
+        <p>Preencha os campos abaixo para entrar em contato conosco.</p>
+    </header>
+    <form>
+
+        <label for="nome">Nome Completo:</label><br>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome aqui"><br><br>
+
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" placeholder="seu.email@exemplo.com"><br><br>
+
+        
+
+
+
+        <p>Quais linguagens de programação você conhece?</p>
+        <input type="checkbox" id="python" name="linguagem" value="python">
+        <label for="python">Python</label><br>
+        <input type="checkbox" id="java" name="linguagem" value="java">
+        <label for="java">Java</label><br>
+        <input type="checkbox" id="html_css" name="linguagem" value="html_css">
+        <label for="html_css">HTML/CSS</label><br><br>
+
+
+        <label for="mensagem">Sua Mensagem:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="5" cols="40" placeholder="Digite sua mensagem aqui..."></textarea><br><br>
+
+        <button type="submit">Enviar Formulário</button>
+        <button type="reset">Limpar Campos</button>
+    </form>
+
+    <footer>
+        <p>Obrigado por seu contato!</p>
+    </footer>
+
+    
+
+    <button id="meuBotao">Voltar para a Página Principal</button>
+    <script src="formulario.js"></script>
+    <script>
+        document.getElementById("meuBotao").addEventListener("click", funcaovolta);
+
+    </script>
+</body>
+
+
+
+
+
+
+</html>
